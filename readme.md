@@ -1,14 +1,14 @@
-# Bright Words
+# Sparkle Words
 
-"Bright Words" é um projeto simples e elegante que destaca animações e estilos visuais atrativos.
+"Sparkle Words" é um projeto simples e elegante que destaca animações e estilos visuais atrativos.
 
 ## Descrição
 
-Este projeto exibe uma citação de Platão usando HTML, CSS e JavaScript. A citação é apresentada com animações de estrelas brilhantes ao redor do texto, criando um efeito visual encantador. É ideal para páginas de apresentação, sites pessoais ou qualquer projeto que precise de um toque filosófico e inspirador.
+Este projeto exibe uma citação de alguns pensadores usando HTML, CSS/Sass e JavaScript. A citação é apresentada com animações de estrelas brilhantes ao redor do texto, criando um efeito visual encantador. É ideal para páginas de apresentação, sites pessoais ou qualquer projeto que precise de um toque filosófico e inspirador.
 
 ## Captura de Tela
 
-![Bright Words Screenshot](images/gifs/Bright%20words-clip.gif)
+![Sparkle Words Screenshot](images/gifs/Sparkle-Words.gif)
 
 ## Tecnologias Utilizadas
 
@@ -29,6 +29,7 @@ Este projeto exibe uma citação de Platão usando HTML, CSS e JavaScript. A cit
 Sinta-se à vontade para contribuir com este projeto. Para isso:
 
 1. Faça um fork do projeto
+
 2. Crie uma branch para sua feature:
     ``` bash
     git checkout -b minha-nova-feature ```
@@ -38,6 +39,7 @@ Sinta-se à vontade para contribuir com este projeto. Para isso:
 4. Push para a branch:
     ``` bash
     git push origin minha-nova-feature ```
+
 5. Abra um Pull Request
 
 ## Referências
