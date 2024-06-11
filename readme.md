@@ -21,7 +21,7 @@ Este projeto exibe uma citação de alguns pensadores usando HTML, CSS/Sass e Ja
 
 ## Estrutura do Projeto
 
-![Estrutura Screenshot](images/Screenshot%202024-06-06%20161839.png)
+![Estrutura Screenshot](images/Screenshot%202024-06-11%20003520.png)
 
 
 ## Contribuição
