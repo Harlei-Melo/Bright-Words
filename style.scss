@@ -114,8 +114,8 @@ h1 {
 
 #toast-container {
   position: fixed;
-  bottom: 22.2%;
-  z-index: 9999;
+  top: 2rem;
+  z-index: 10000;
 }
 
 .toast {
@@ -162,13 +162,25 @@ footer {
 
 #source-link,
 .meta-link {
+
+  @include responsive(s) {
+    font-size: 12px;
+  }
+
   >i {
     color: $blue;
     margin-right: 0.8rem;
     height: 20px;
     line-height: 20px;
     font-size: 21px;
+
+    @include responsive(s) {
+      font-size: 12px;
+    }
+ 
   }
+
+
 }
 
 .meta-link {
@@ -181,12 +193,16 @@ footer {
   border-radius: 6px;
   text-decoration: none;
   transition: background-color 600ms, border-color 600ms;
-  z-index: 10000;
+  z-index: 9998;
 
   backdrop-filter: blur(3px);
   background-color: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+
+  @include responsive(s) {
+    font-size: 12px;
+  }
 
   &:hover {
     background-color: rgba(255, 255, 255, 0.1);

@@ -116,8 +116,8 @@ h1 > .sparkle > .sparkle-text {
 
 #toast-container {
   position: fixed;
-  bottom: 22.2%;
-  z-index: 9999;
+  top: 2rem;
+  z-index: 10000;
 }
 
 .toast {
@@ -160,6 +160,12 @@ footer {
   flex-wrap: wrap;
 }
 
+@media screen and (max-width: 960px) {
+  #source-link,
+  .meta-link {
+    font-size: 12px;
+  }
+}
 #source-link > i,
 .meta-link > i {
   color: #40dbff;
@@ -167,6 +173,12 @@ footer {
   height: 20px;
   line-height: 20px;
   font-size: 21px;
+}
+@media screen and (max-width: 960px) {
+  #source-link > i,
+  .meta-link > i {
+    font-size: 12px;
+  }
 }
 
 .meta-link {
@@ -178,12 +190,17 @@ footer {
   border-radius: 6px;
   text-decoration: none;
   transition: background-color 600ms, border-color 600ms;
-  z-index: 10000;
+  z-index: 9998;
   -webkit-backdrop-filter: blur(3px);
           backdrop-filter: blur(3px);
   background-color: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+}
+@media screen and (max-width: 960px) {
+  .meta-link {
+    font-size: 12px;
+  }
 }
 .meta-link:hover {
   background-color: rgba(255, 255, 255, 0.1);
