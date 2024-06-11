@@ -3,21 +3,27 @@
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: 0;
+  box-sizing: border-box;
 }
 
 @import "scss/colors";
+@import "scss/layout";
 @import "scss/animations.scss";
 
 
 body {
-  background-color: #0a0a0a;
+  width: 100%;
+  height: 100vh;
+
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 100vh;
+
+  background-color: #0a0a0a;
+
   margin: 0px;
+
   overflow: hidden;
   place-items: center;
 }
@@ -42,6 +48,7 @@ h1 {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+
 }
 
 
@@ -99,15 +106,52 @@ h1 {
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
 
-      white-space: nowrap;
-
       transition: opacity 600ms ease;
       animation: background-pan 3s linear infinite;
     }
   }
 }
 
+#toast-container {
+  position: fixed;
+  bottom: 22.2%;
+  z-index: 9999;
+}
+
+.toast {
+  display: flex;
+  align-items: center;
+  min-width: 200px;
+  margin-bottom: 15px;
+  padding: 16px 24px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #323232;
+  color: white;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: toast-in 0.5s forwards, toast-out 0.5s forwards 2.5s;
+}
+
+.toast i {
+  margin-right: 12px;
+}
+
+
+
 /* -- Link -- */
+
+.align {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+
+  @include responsive(s) {
+    flex-direction: column;
+  }
+}
 
 footer {
   display: flex;
@@ -148,7 +192,7 @@ footer {
     background-color: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
   }
-  
+
 }
 
 .meta-link {

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,34 +9,46 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+    rel="stylesheet">
   <link rel="shortcut icon" href="svg/wand-sparkles-solid.svg" type="image/x-icon">
   <title>Bright Words</title>
 </head>
 
 <body>
-  <h1 id="quote-box">
-    A vida deve ser vivida como
-    <span class="sparkle">
-      <span class="sparkle-effect">
-        <img src="svg/shine.svg" onload="SVGInject(this)">
+  <main class="container">
+    <h1 id="quote-box">
+      A vida deve ser vivida como
+      <span class="sparkle">
+        <span class="sparkle-effect">
+          <img src="svg/shine.svg" onload="SVGInject(this)">
+        </span>
+        <span class="sparkle-effect">
+          <img src="svg/shine.svg" onload="SVGInject(this)">
+        </span>
+        <span class="sparkle-effect">
+          <img src="svg/shine.svg" onload="SVGInject(this)">
+        </span>
+        <span class="sparkle-text">uma obra de arte.</span>
       </span>
-      <span class="sparkle-effect">
-        <img src="svg/shine.svg" onload="SVGInject(this)">
-      </span>
-      <span class="sparkle-effect">
-        <img src="svg/shine.svg" onload="SVGInject(this)">
-      </span>
-      <span class="sparkle-text">uma obra de arte.</span>
-    </span>
-    <br> – Platão
-  </h1>
+      <br> – Platão
+    </h1>
 
-  <button class="change-quote meta-link" id="change-quote">
-    <i class="fa-solid fa-shuffle"></i>
-    Mudar Frase
-  </button>  
 
+    <div class="align">
+      <button class="change-quote meta-link" id="change-quote">
+        <i class="fa-solid fa-shuffle"></i>
+        Mudar Frase
+      </button>
+      <button class="copy-quote meta-link" id="copy-quote">
+        <i class="fa-solid fa-copy"></i>
+        Copiar Frase
+      </button>
+    </div>
+
+  </main>
+  <div id="toast-container"></div>
   <footer>
 
     <a id="source-link" class="meta-link" href="https://linear.app/readme" target="_blank">
@@ -53,4 +66,5 @@
 
   <script src="js/script.js"></script>
 </body>
+
 </html>
