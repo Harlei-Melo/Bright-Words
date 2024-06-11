@@ -58,9 +58,10 @@ document.addEventListener('DOMContentLoaded', function() {
           <span class="sparkle-effect">
             <img src="svg/shine.svg" onload="SVGInject(this)">
           </span>
-          <span></span><span class="sparkle-text">${secondPart}</span>
+          <span></span><span class="sparkle-text">${secondPart}</span><br>
+          <br>
         </span>
-        <br><br>  – ${newQuote.author}</h1>`;
+        <br>  – ${newQuote.author}</h1>`;
   
       // Reaplique a animação aos novos elementos sparkle-effect
       for (const star of quoteBox.getElementsByClassName("sparkle-effect")) {
