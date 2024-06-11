@@ -32,13 +32,13 @@ Sinta-se à vontade para contribuir com este projeto. Para isso:
 
 2. Crie uma branch para sua feature:
     ``` bash
-    git checkout -b minha-nova-feature ```
+    git checkout -b 'minha-nova-feature'
 3. Commit suas alterações:
     ``` bash
-    git commit -m 'Adiciona nova feature' ```
+    git commit -m 'Adiciona nova feature'
 4. Push para a branch:
     ``` bash
-    git push origin minha-nova-feature ```
+    git push origin 'minha-nova-feature'
 
 5. Abra um Pull Request
 
