@@ -28,13 +28,34 @@ document.addEventListener('DOMContentLoaded', function() {
     { text: "A única coisa que sei é que nada sei.", author: "Sócrates" },
     { text: "Quando você olha muito tempo para um abismo, o abismo olha para você.", author:"Friedrich Nietzsche" },
     { text: "Daria tudo que sei pela metade do que ignoro.", author:"René Descartes" },
-    { text: "Dedica-se a esperar o futuro apenas quem não sabe viver o presente.", author:"Sêneca" },
+    { text: "Seja a mudança que você deseja ver no mundo.", author:"Mahatma Gandhi" },
+    { text: "     A suprema arte da guerra é derrotar o inimigo sem lutar.", author:"Sun Tzu" },
+    { text: "   A felicidade da sua vida depende da qualidade dos seus pensamentos.", author:"Marco Aurélio" },
+    { text: "O preço da liberdade é a eterna vigilância.", author:"Thomas Jefferson" },
+    { text: "     Nada é permanente, exceto a mudança.", author:"Heráclito" },
+    { text: "Posso não concordar com o que você diz, mas defenderei até a morte o seu direito de dizê-lo.", author:"Voltaire" },
+    { text: "  O destino mistura as cartas, e nós jogamos.", author:"Arthur Schopenhauer" },
+    { text: " Não são as coisas que nos perturbam, mas a nossa interpretação das coisas.", author:"Epicteto" },
+    { text: "   A beleza das coisas existe na mente que as contempla.", author:"David Hume" },
+    { text: "  Se você pode sonhar, você pode fazer", author:"Walt Disney" },
+    { text: "A arte é para consolar aqueles que estão quebrados pela vida.", author:"Vincent Van Gogh" },
+    { text: "O maior prazer na vida é fazer o que as pessoas dizem que você não é capaz de fazer.", author:"Platão" },
+
+    
   ];
+
+  let availableQuotes = [...quotes]; // Clonar a lista de frases
 
   function changeQuote() {
     const quoteBox = document.getElementById('quote-box');
-    const randomIndex = Math.floor(Math.random() * quotes.length);
-    const newQuote = quotes[randomIndex];
+
+    // Reabastecer a lista de frases não exibidas quando estiver vazia
+    if (availableQuotes.length === 0) {
+      availableQuotes = [...quotes];
+    }
+
+    const randomIndex = Math.floor(Math.random() * availableQuotes.length);
+    const newQuote = availableQuotes.splice(randomIndex, 1)[0]; // Remover e obter a frase selecionada
     const quoteText = newQuote.text;
   
     // Divida o texto da citação em duas partes aleatórias
@@ -92,7 +113,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Remova o toast após a animação
     setTimeout(() => {
       toast.remove();
-    }, 3000);
+    }, 2000);
   }
 
   document.getElementById('change-quote').addEventListener('click', changeQuote);
