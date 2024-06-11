@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
           </span>
           <span></span><span class="sparkle-text">${secondPart}</span>
         </span>
-        <br> – ${newQuote.author}</h1>`;
+        <br><br>  – ${newQuote.author}</h1>`;
   
       // Reaplique a animação aos novos elementos sparkle-effect
       for (const star of quoteBox.getElementsByClassName("sparkle-effect")) {
