@@ -3,11 +3,11 @@ document.addEventListener('DOMContentLoaded', function() {
       interval = 1000;
 
   const rand = (min, max) => 
-    Math.floor(Math.random() * (max - min + 1)) + min;
+    Math.floor(Math.random() * (max - min + 2)) + min;
 
   const animate = star => {
     star.style.setProperty("--star-left", `${rand(-10, 100)}%`);
-    star.style.setProperty("--star-top", `${rand(-40, 80)}%`);
+    star.style.setProperty("--star-top", `${rand(10, 45)}%`); 
 
     star.style.animation = "none";
     star.offsetHeight;
@@ -15,33 +15,31 @@ document.addEventListener('DOMContentLoaded', function() {
 
     setTimeout(() => {
       animate(star);
-    }, 1000);
+    }, 1000 + rand(0, 500)); // Adicione um atraso aleatório entre 0 e 500ms
   }
 
   for(const star of document.getElementsByClassName("sparkle-effect")) {
     setTimeout(() => {
       animate(star);
-    }, index++ * (interval / 3))
+    }, index++ * (interval / 4))
   }
 
   const quotes = [
-    { text: "A única coisa que sei é que nada sei.", author: "Sócrates" },
+    { text: "      Sofremos mais na imaginação do que na realidade.", author: "Séneca" }, 
     { text: "Quando você olha muito tempo para um abismo, o abismo olha para você.", author:"Friedrich Nietzsche" },
-    { text: "Daria tudo que sei pela metade do que ignoro.", author:"René Descartes" },
+    { text: "Daria tudo que sei pela metade do que ignoro.", author:"René Descartes" }, 
     { text: "Seja a mudança que você deseja ver no mundo.", author:"Mahatma Gandhi" },
-    { text: "     A suprema arte da guerra é derrotar o inimigo sem lutar.", author:"Sun Tzu" },
+    { text: "Não é o que dizemos ou pensamos que nos define, mas o que fazemos.", author:"Jane Austen" }, 
     { text: "   A felicidade da sua vida depende da qualidade dos seus pensamentos.", author:"Marco Aurélio" },
-    { text: "O preço da liberdade é a eterna vigilância.", author:"Thomas Jefferson" },
-    { text: "     Nada é permanente, exceto a mudança.", author:"Heráclito" },
-    { text: "Posso não concordar com o que você diz, mas defenderei até a morte o seu direito de dizê-lo.", author:"Voltaire" },
-    { text: "  O destino mistura as cartas, e nós jogamos.", author:"Arthur Schopenhauer" },
-    { text: " Não são as coisas que nos perturbam, mas a nossa interpretação das coisas.", author:"Epicteto" },
-    { text: "   A beleza das coisas existe na mente que as contempla.", author:"David Hume" },
+    { text: "O preço da liberdade é a eterna vigilância.", author:"Thomas Jefferson" }, 
+    { text: "     Nada é permanente, exceto a mudança.", author:"Heráclito" }, 
+    { text: "Acordar limpo e sóbrio é o primeiro presente de cada dia.", author:"I am Sober" }, 
+    { text: "    A arte não é sobre replicar o mundo, mas sobre interpretá-lo e acrescentar a ele como você o enxerga.", author:"Kyomii" }, 
+    { text: " Não são as coisas que nos perturbam, mas a nossa interpretação das coisas.", author:"Epicteto" }, 
+    { text: "   A beleza das coisas existe na mente que as contempla.", author:"David Hume" }, 
     { text: "  Se você pode sonhar, você pode fazer", author:"Walt Disney" },
-    { text: "A arte é para consolar aqueles que estão quebrados pela vida.", author:"Vincent Van Gogh" },
-    { text: "O maior prazer na vida é fazer o que as pessoas dizem que você não é capaz de fazer.", author:"Platão" },
-
-    
+    { text: "A arte é para consolar aqueles que estão quebrados pela vida.", author:"Vincent Van Gogh" }, 
+    { text: " Seja como a rocha que as ondas não param de bater; ela permanece firme e, ao redor dela, as águas acabam se acalmando.", author:"Marco Aurélio" }, 
   ];
 
   let availableQuotes = [...quotes]; // Clonar a lista de frases
@@ -58,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const newQuote = availableQuotes.splice(randomIndex, 1)[0]; // Remover e obter a frase selecionada
     const quoteText = newQuote.text;
   
-    // Divida o texto da citação em duas partes aleatórias
+    // Divida o texto da citação em duas partes
     const effectLength = 23;
     const firstPart = quoteText.slice(0, effectLength);
     const secondPart = quoteText.slice(effectLength);
@@ -86,7 +84,9 @@ document.addEventListener('DOMContentLoaded', function() {
   
       // Reaplique a animação aos novos elementos sparkle-effect
       for (const star of quoteBox.getElementsByClassName("sparkle-effect")) {
-        animate(star);
+        setTimeout(() => {
+          animate(star);
+        }, rand(0, 500)); // Adicione um atraso aleatório entre 0 e 500ms
       }
   
       quoteBox.style.opacity = 1;
